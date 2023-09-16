@@ -1,11 +1,11 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import BottomMenu from "./components/BottomMenu";
+import { StyleSheet, Text, View, ScrollView } from "react-native";
+import HomePage from "./View/HomePage";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <BottomMenu />
+      <HomePage />
     </View>
   );
 }
@@ -13,6 +13,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
   },
 });
