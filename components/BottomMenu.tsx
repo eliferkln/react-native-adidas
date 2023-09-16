@@ -33,34 +33,36 @@ class BottomMenu extends Component<BottomMenuProps, BottomMenuState> {
     const { activeIndex } = this.state;
 
     return (
-      <View style={[styles.navigation, this.props.style]}>
-        <TouchableOpacity
-          style={[styles.list]}
-          onPress={() => this.handleMenuItemPress(0)}
-        >
-          <Ionicons
-            name="home-outline"
-            style={[styles.icon, activeIndex === 0 && styles.activeIcon]}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[styles.list]}
-          onPress={() => this.handleMenuItemPress(1)}
-        >
-          <Ionicons
-            name="person-outline"
-            style={[styles.icon, activeIndex === 1 && styles.activeIcon]}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[styles.list]}
-          onPress={() => this.handleMenuItemPress(2)}
-        >
-          <Ionicons
-            name="settings-outline"
-            style={[styles.icon, activeIndex === 2 && styles.activeIcon]}
-          />
-        </TouchableOpacity>
+      <View style={[styles.menu]}>
+        <View style={[styles.navigation, this.props.style]}>
+          <TouchableOpacity
+            style={[styles.list]}
+            onPress={() => this.handleMenuItemPress(0)}
+          >
+            <Ionicons
+              name="home-outline"
+              style={[styles.icon, activeIndex === 0 && styles.activeIcon]}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.list]}
+            onPress={() => this.handleMenuItemPress(1)}
+          >
+            <Ionicons
+              name="person-outline"
+              style={[styles.icon, activeIndex === 1 && styles.activeIcon]}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.list]}
+            onPress={() => this.handleMenuItemPress(2)}
+          >
+            <Ionicons
+              name="settings-outline"
+              style={[styles.icon, activeIndex === 2 && styles.activeIcon]}
+            />
+          </TouchableOpacity>
+        </View>
       </View>
     );
   }
@@ -69,6 +71,10 @@ class BottomMenu extends Component<BottomMenuProps, BottomMenuState> {
 export default BottomMenu;
 
 const styles = StyleSheet.create({
+  menu: {
+    flex: 0,
+    alignItems: "center",
+  },
   navigation: {
     width: "80%",
     height: 60,
